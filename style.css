@@ -1,0 +1,297 @@
+/*CSS GRID WEBSITE */
+
+/* COMMON TO ALL PAGES */
+:root {
+	--light: #fff;
+	--semi: #f0f0f0;
+	--medium: #666666;
+	--dark #333;
+}
+
+html {
+	font-family: "Rajdhani", serif;
+	 color: var(--medium);
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	margin: 4% 5%; /*tb lr*/
+}
+
+header {
+	/*background: red;*/
+	text-align: center;
+}
+
+header img {
+	width: 20%;
+}
+
+ul {
+	/*background-color: yellow;*/
+	list-style: none;
+	padding: 0;
+	margin-top: 4%;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+ul a {
+	color: var(--dark);
+	text-decoration: none;
+	font-size: 1.6rem;
+	background: var(--semi);
+	padding: .8rem;
+	display: block;
+}
+
+ul a:hover {
+	color: var(--medium);
+	background: var(--light);
+	transition: background .5s ease-in-out;
+}
+
+a#selected {
+	color: salmon;
+}
+
+img.fit {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+span.title {
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+p.text {
+	margin-top: 8%;
+}
+
+/* LAYOUT OF THE HOME PAGE ALONE */
+
+div.containerHome {
+	/*background: yellow;*/
+	margin-top: 6%;
+	display: grid;
+	grid-gap: 60px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas: 
+		"a a a"
+		"b c d"
+		"e e f" 
+		"e e g"
+		"h h h";
+}
+
+div.area1 {
+	grid-area: a;
+}
+
+div.area2 {
+	grid-area: b;
+	margin-top: 8%;
+}
+
+div.area3 {
+	grid-area: c;
+	margin-top: 8%;
+}
+
+div.area4 {
+	grid-area: d;
+	margin-top: 8%;
+}
+
+div.area5 {
+	grid-area: e;
+}
+
+div.area6 {
+	grid-area: f;
+}
+
+div.area7 {
+	grid-area: g;
+}
+
+div.area8 {
+	grid-area: h;
+	background: var(--semi);
+	text-align: center;
+	padding: 2%;
+}
+
+/* LAYOUT OF THE ABOUT PAGE ALONE */
+
+div.containerAbout {
+	/*background: yellow;*/
+	margin-top: 6%;
+	display: grid;
+	grid-gap: 60px;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-areas: 
+		"i j j j"
+		"k k k l"
+		"m n o l"
+		"h h h h";
+}
+
+div.area9 {
+	grid-area: i;
+}
+
+div.area10 {
+	grid-area: j;
+}
+
+div.area11 {
+	grid-area: k;
+}
+
+div.area12 {
+	grid-area: l;
+}
+
+div.area13 {
+	grid-area: m;
+}
+
+div.area14 {
+	grid-area: n;
+}
+
+div.area15 {
+	grid-area: o;
+}
+
+p.textAbout {
+	margin-top: 0;
+}
+
+/* LAYOUT FOR THIRD PAGE */
+
+div.containerFinal {
+	/*background: yellow;*/
+	margin-top: 6%;
+	display: grid;
+	grid-gap: 60px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas: 
+		"p q r"
+		"s s t"
+		"u v v" 
+		"w v v"
+		"x x x";
+
+}
+
+div.area16 {
+	grid-area: p;
+}
+
+div.area17 {
+	grid-area: q;
+}
+
+div.area18 {
+	grid-area: r;
+}
+
+div.area19 {
+	grid-area: s;
+}
+
+div.area20 {
+	grid-area: t;
+}
+
+div.area21 {
+	grid-area: u;
+}
+
+div.area22 {
+	grid-area: v;
+}
+
+div.area23 {
+	grid-area: w;
+}
+
+div.area24 {
+	grid-area: x;
+	background: var(--semi);
+	text-align: center;
+	padding: 2%;
+}
+/* LAYOUT FOR SMALL SCREENS */
+
+@media(max-width:700px){
+
+	ul {
+		grid-template-columns: 1fr;
+	}
+
+	div.containerHome {
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+		"a"
+		"b"
+		"c"
+		"d"
+		"e"
+		"f"
+		"g"
+		"h";
+	}
+
+	div.containerAbout {
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+		"i"
+		"j"
+		"k"
+		"l"
+		"m"
+		"n"
+		"o"
+		"h";
+	}
+		
+	div.containerFinal {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"p"
+		"q"
+		"r"
+		"s"
+		"t"
+		"u"
+		"v"
+		"w"
+		"x";
+	}
+
+img {
+	width: 100%;
+}
+
+header img {
+	width: 20%;
+}
+
+}
+
+
+
+
+
+
+
+
